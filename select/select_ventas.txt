@@ -1,0 +1,41 @@
+select 
+	lc_Bus as bus, 
+	lc_Conductor as Conductor,
+	lc_Maq as Maquina, 
+	lc_HLiqui as Liquidacion, 
+	ldv_Fecha as fecha,
+
+	ldv_Tarifa as tarifa, 
+	t.tar_nomb as NombreTarifa,
+	ldv_Precio as precio, 
+	ldv_NumSerB as Billete
+
+from dat_liq as d
+
+join dat_liqdven as dl on(dl.ldv_Id=d.lc_Id) and (dl.ldv_idemp=d.lc_idemp)
+
+join tarifa as t on (t.tar_idtar=dl.ldv_tarifa) and (t.tar_idemp =d.lc_idemp)
+
+where d.lc_hinicio>='20220222 00:00:00'
+
+and dl.ldv_fecha>='20220222 00:00:00'
+
+and dl.ldv_fecha<='20220325 23:59:59'
+
+and dl.ldv_tarifa in (3)
+
+and d.lc_activa =1
+
+order by dl.ldv_fecha asc
+
+
+------------------------
+
+y los campos que necesitaríamos extra son:
+
+select 
+	ldv_idLin as Route, 
+	ldv_idTra as Line, 
+	ldv_Orig as Stop
+
+from dat_liqdven
