@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='utf-8' ?>
 
-<!-- build 20221.22.0324.2209                               -->
-<workbook original-version='18.1' source-build='2022.1.0 (20221.22.0324.2209)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+<!-- build 20221.22.0712.0324                               -->
+<workbook original-version='18.1' source-build='2022.1.4 (20221.22.0712.0324)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
   <document-format-change-manifest>
     <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
     <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
     <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <CollapsiblePane />
     <_.fcp.Layers.true...Layers />
     <MapboxVectorStylesAndLayers />
     <_.fcp.MarkAnimation.true...MarkAnimation />
@@ -17,6 +19,7 @@
     <WindowsPersistSimpleIdentifiers />
     <WorksheetBackgroundTransparency />
     <ZoneBackgroundTransparency />
+    <ZoneVisibilityControl />
   </document-format-change-manifest>
   <preferences>
     <preference name='ui.encoding.shelf.height' value='24' />
@@ -1224,17 +1227,29 @@
             </map>
           </encoding>
           <encoding attr='color' field='[none:line_code (passenger_location2):ok]' type='palette'>
+            <map to='#003664'>
+              <bucket>203</bucket>
+            </map>
             <map to='#4e79a7'>
+              <bucket>101</bucket>
+            </map>
+            <map to='#5c8f25'>
+              <bucket>202</bucket>
+            </map>
+            <map to='#753500'>
               <bucket>103</bucket>
             </map>
             <map to='#76b7b2'>
-              <bucket>202</bucket>
+              <bucket>205</bucket>
             </map>
             <map to='#e15759'>
+              <bucket>105</bucket>
+            </map>
+            <map to='#e15f84'>
               <bucket>102</bucket>
             </map>
             <map to='#f28e2b'>
-              <bucket>203</bucket>
+              <bucket>201</bucket>
             </map>
           </encoding>
         </style-rule>
@@ -1330,7 +1345,7 @@
     <mapsource name='Tableau' />
   </mapsources>
   <actions>
-    <action caption='Filtro 1 (generado)' name='[Action1_8D29C3E7F25E4F3987CCF9A895210276]'>
+    <action caption='Filtro 2 (generado) 1' name='[Action2_94E4A20824364C3A87268B23E2496769]'>
       <activation auto-clear='true' type='on-select' />
       <source dashboard='Lineas' type='sheet' worksheet='pass_route_day' />
       <command command='tsc:tsl-filter'>
@@ -1344,7 +1359,7 @@
       <layout-options>
         <title>
           <formatted-text>
-            <run fontalignment='1'>Red de Transporte</run>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>RED DE TRANSPORTE PUBLICA</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -1398,14 +1413,14 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Longitude (generated)]' field-type='quantitative' max='-720564.30377038429' min='-801365.57954792317' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Latitude (generated)]' field-type='quantitative' max='4046305.9471010426' min='4002293.6104460852' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Longitude (generated)]' field-type='quantitative' max='-747838.55036042037' min='-778006.26819547114' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Latitude (generated)]' field-type='quantitative' max='4038430.9896728937' min='4022240.4337248108' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
           </style-rule>
           <style-rule element='title'>
-            <format attr='border-color' value='#ff9da7' />
-            <format attr='border-width' value='0' />
-            <format attr='border-style' value='none' />
-            <format attr='background-color' value='#f6eee3' />
+            <format attr='background-color' value='#ffffff' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#000000' />
+            <format attr='border-width' value='2' />
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='b01002_001e' value='false' />
@@ -1432,9 +1447,19 @@
             <format attr='enabled' id='dp05_0053e' value='false' />
             <format attr='enabled' id='dp05_0066e' value='false' />
             <format attr='enabled' id='dp05_0077e' value='false' />
+            <format attr='enabled' id='place-hamlet' value='true' />
+            <format attr='enabled' id='place-village' value='true' />
+            <format attr='enabled' id='place-town' value='true' />
+            <format attr='enabled' id='place-city-sm' value='true' />
+            <format attr='enabled' id='place-city-md-s' value='true' />
+            <format attr='enabled' id='place-city-md-n' value='true' />
+            <format attr='enabled' id='place-city-lg-s' value='true' />
+            <format attr='enabled' id='place-city-lg-n' value='true' />
+            <format attr='enabled' id='place-islands' value='true' />
+            <format attr='enabled' id='place-islets' value='true' />
           </style-rule>
           <style-rule element='map'>
-            <format attr='washout' value='0' />
+            <format attr='washout' value='0.34000000357627869' />
             <format attr='map-style' value='satellite' />
             <format attr='wrap' value='false' />
           </style-rule>
@@ -1471,17 +1496,17 @@
             </encodings>
             <customized-tooltip>
               <formatted-text>
-                <run fontcolor='#787878'>Line Code:&#9;</run>
-                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code:ok]>]]></run>
-                <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Line Name:&#9;</run>
-                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_name:nk]>]]></run>
-                <run>Æ&#10;</run>
                 <run fontcolor='#787878'>Route Code:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code:ok]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>Route Name:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Line Code:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code:ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Line Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_name:nk]>]]></run>
                 <run>Æ&#10;</run>
                 <run fontcolor='#787878'>Nº Stop:&#9;</run>
                 <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:stop_order:qk]>]]></run>
@@ -1556,11 +1581,17 @@
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='5'>
             <groupfilter function='member' level='[dy:date (passenger_location2):ok]' member='21' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' filter-group='4'>
-            <groupfilter function='level-members' level='[none:line_code (passenger_location2):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' filter-group='8'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='101' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='102' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='103' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='104' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='105' />
+            </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' filter-group='7'>
-            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='2' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='201' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]</column>
@@ -1577,13 +1608,30 @@
             <format attr='border-color' scope='cols' value='#000000' />
             <format attr='border-width' scope='cols' value='1' />
             <format attr='text-align' value='center' />
-            <format attr='height' value='20' />
+            <format attr='height' value='26' />
           </style-rule>
           <style-rule element='label'>
             <format attr='display' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[hr:date (passenger_location2):ok]' value='false' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' value='Day of Date'>
+              <formatted-text>
+                <run>Day of Date</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' value='Route Code'>
+              <formatted-text>
+                <run>Route Code</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' value='Line Code'>
+              <formatted-text>
+                <run>Line Code</run>
+              </formatted-text>
+            </format>
           </style-rule>
         </style>
         <panes>
@@ -1595,6 +1643,15 @@
             <encodings>
               <text column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[ctd:bus (passenger_location2):qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Hour of Date:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[hr:date (passenger_location2):ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Nº of Buses:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[ctd:bus (passenger_location2):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -1613,115 +1670,13 @@
       </table>
       <simple-id uuid='{7B4F7D0D-4CF8-49B0-80A8-8A4101EA9E25}' />
     </worksheet>
-    <worksheet name='map_stops'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-          </datasources>
-          <mapsources>
-            <mapsource name='Tableau' />
-          </mapsources>
-          <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-            <column-instance column='[ticket_number (passenger_location2)]' derivation='Count' name='[cnt:ticket_number (passenger_location2):qk]' pivot='key' type='quantitative' />
-            <column aggregation='Avg' caption='Latitude (Passenger Location2)' datatype='real' datatype-customized='true' name='[latitude (passenger_location2)]' role='dimension' semantic-role='[Geographical].[Latitude]' type='quantitative' />
-            <column caption='Line Code (Passenger Location2)' datatype='integer' name='[line_code (passenger_location2)]' role='dimension' type='ordinal' />
-            <column aggregation='Avg' caption='Longitude (Passenger Location2)' datatype='real' datatype-customized='true' name='[longitude (passenger_location2)]' role='dimension' semantic-role='[Geographical].[Longitude]' type='quantitative' />
-            <column-instance column='[latitude (passenger_location2)]' derivation='None' name='[none:latitude (passenger_location2):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[line_code (passenger_location2)]' derivation='None' name='[none:line_code (passenger_location2):ok]' pivot='key' type='ordinal' />
-            <column-instance column='[longitude (passenger_location2)]' derivation='None' name='[none:longitude (passenger_location2):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[route_code (passenger_location2)]' derivation='None' name='[none:route_code (passenger_location2):ok]' pivot='key' type='ordinal' />
-            <column-instance column='[stop_name (passenger_location2)]' derivation='None' name='[none:stop_name (passenger_location2):nk]' pivot='key' type='nominal' />
-            <column caption='Route Code (Passenger Location2)' datatype='integer' name='[route_code (passenger_location2)]' role='dimension' type='ordinal' />
-            <column caption='Stop Name (Passenger Location2)' datatype='string' name='[stop_name (passenger_location2)]' role='dimension' type='nominal' />
-            <column caption='Ticket Number (Passenger Location2)' datatype='string' name='[ticket_number (passenger_location2)]' role='dimension' type='nominal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]'>
-            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
-              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='101' />
-              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='102' />
-              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='103' />
-              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='104' />
-              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='105' />
-            </groupfilter>
-          </filter>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]'>
-            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='33' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
-          </filter>
-          <slices>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]</column>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:longitude (passenger_location2):qk]' field-type='quantitative' max='-747400.91952226148' min='-789131.81918295135' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:latitude (passenger_location2):qk]' field-type='quantitative' max='4033056.1556137018' min='4007722.0523235933' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
-          </style-rule>
-          <style-rule element='mark'>
-            <encoding attr='color' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' num-steps='10' palette='red_10_0' type='interpolated' />
-          </style-rule>
-          <style-rule element='map-layer'>
-            <format attr='enabled' id='b01002_001e' value='false' />
-            <format attr='enabled' id='b01002_002e' value='false' />
-            <format attr='enabled' id='b01002_003e' value='false' />
-            <format attr='enabled' id='dp02_0001e' value='false' />
-            <format attr='enabled' id='dp02_0015e' value='false' />
-            <format attr='enabled' id='dp03_0027e_plus_dp03_0029e' value='false' />
-            <format attr='enabled' id='dp03_0028e' value='false' />
-            <format attr='enabled' id='dp03_0030e_plus_dp03_0031e' value='false' />
-            <format attr='enabled' id='dp03_0062e' value='false' />
-            <format attr='enabled' id='dp03_0088e' value='false' />
-            <format attr='enabled' id='dp04_0001e' value='false' />
-            <format attr='enabled' id='dp04_0046e' value='false' />
-            <format attr='enabled' id='dp04_0047e' value='false' />
-            <format attr='enabled' id='dp04_0089e' value='false' />
-            <format attr='enabled' id='dp05_0001e' value='false' />
-            <format attr='enabled' id='dp05_0002e_div_dp05_0003e' value='false' />
-            <format attr='enabled' id='dp05_0032e' value='false' />
-            <format attr='enabled' id='dp05_0033e' value='false' />
-            <format attr='enabled' id='dp05_0034e' value='false' />
-            <format attr='enabled' id='dp05_0039e' value='false' />
-            <format attr='enabled' id='dp05_0047e' value='false' />
-            <format attr='enabled' id='dp05_0053e' value='false' />
-            <format attr='enabled' id='dp05_0066e' value='false' />
-            <format attr='enabled' id='dp05_0077e' value='false' />
-          </style-rule>
-          <style-rule element='map'>
-            <format attr='washout' value='0' />
-            <format attr='map-style' value='dark' />
-          </style-rule>
-          <style-rule element='map-data-layer'>
-            <format attr='palette' value='tableau-map-blue-green-light' />
-            <format attr='geo-area-type' value='State' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-            <encodings>
-              <color column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' />
-              <size column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' />
-              <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_name (passenger_location2):nk]' />
-            </encodings>
-          </pane>
-        </panes>
-        <rows>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:latitude (passenger_location2):qk]</rows>
-        <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:longitude (passenger_location2):qk]</cols>
-      </table>
-      <simple-id uuid='{55CFE0F6-D845-4249-97A8-E8F09C1C8E06}' />
-    </worksheet>
     <worksheet name='map_stops_dinamic'>
       <layout-options>
         <title>
           <formatted-text>
-            <run fontalignment='1' fontsize='10'>&lt;</run>
-            <run fontalignment='1' fontsize='10'>Page Name</run>
-            <run fontalignment='1' fontsize='10'>&gt;</run>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>MAPA DE CALOR PASAJEROS (&lt;</run>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>Page Name</run>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>&gt;)</run>
           </formatted-text>
         </title>
       </layout-options>
@@ -1742,13 +1697,15 @@
             <column-instance column='[date (passenger_location2)]' derivation='Minute' name='[mi:date (passenger_location2):qk]' pivot='key' type='quantitative' />
             <column-instance column='[latitude (passenger_location2)]' derivation='None' name='[none:latitude (passenger_location2):qk]' pivot='key' type='quantitative' />
             <column-instance column='[longitude (passenger_location2)]' derivation='None' name='[none:longitude (passenger_location2):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[stop_code (passenger_location2)]' derivation='None' name='[none:stop_code (passenger_location2):ok]' pivot='key' type='ordinal' />
             <column-instance column='[stop_name (passenger_location2)]' derivation='None' name='[none:stop_name (passenger_location2):nk]' pivot='key' type='nominal' />
+            <column caption='Stop Code (Passenger Location2)' datatype='integer' name='[stop_code (passenger_location2)]' role='dimension' type='ordinal' />
             <column caption='Stop Name (Passenger Location2)' datatype='string' name='[stop_name (passenger_location2)]' role='dimension' type='nominal' />
             <column-instance column='[date (passenger_location2)]' derivation='Hour-Trunc' name='[thr:date (passenger_location2):ok]' pivot='key' type='ordinal' />
             <column caption='Ticket Number (Passenger Location2)' datatype='string' name='[ticket_number (passenger_location2)]' role='dimension' type='nominal' />
           </datasource-dependencies>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='6'>
-            <groupfilter function='level-members' level='[dy:date (passenger_location2):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]'>
+            <groupfilter function='member' level='[dy:date (passenger_location2):ok]' member='21' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]</column>
@@ -1757,8 +1714,8 @@
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:longitude (passenger_location2):qk]' field-type='quantitative' max='-707581.28184801317' min='-817974.17547941289' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
-            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:latitude (passenger_location2):qk]' field-type='quantitative' max='4057335.4848345015' min='4000275.8652635193' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:latitude (passenger_location2):qk]' field-type='quantitative' max='4057279.5234582485' min='3999076.6928286538' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:longitude (passenger_location2):qk]' field-type='quantitative' max='-704442.02700187871' min='-824600.33643085812' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='border-width' value='0' />
@@ -1791,6 +1748,12 @@
             <format attr='line-visibility' scope='rows' value='off' />
             <format attr='stroke-size' scope='cols' value='0' />
             <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#ffffff' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#000000' />
+            <format attr='border-width' value='2' />
           </style-rule>
           <style-rule element='map-layer'>
             <format attr='enabled' id='b01002_001e' value='false' />
@@ -1827,11 +1790,15 @@
             <format attr='geo-area-type' value='State' />
           </style-rule>
           <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' value='Day of Date' />
             <format attr='color' value='#000000' />
             <format attr='background-color' value='#ffffff' />
           </style-rule>
           <style-rule element='quick-filter-title'>
             <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='page-card-title'>
+            <format attr='title' value='Movement ControlHora de Date (Passenger Location2)' />
           </style-rule>
         </style>
         <panes>
@@ -1845,7 +1812,20 @@
               <color column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' />
               <size column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' />
               <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_name (passenger_location2):nk]' />
+              <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_code (passenger_location2):ok]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Stop Code:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_code (passenger_location2):ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Stop Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_name (passenger_location2):nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Nº Passenger:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='size' value='1.5932043790817261' />
@@ -1889,11 +1869,17 @@
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='5'>
             <groupfilter function='member' level='[dy:date (passenger_location2):ok]' member='21' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' filter-group='4'>
-            <groupfilter function='level-members' level='[none:line_code (passenger_location2):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' filter-group='8'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='101' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='102' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='103' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='104' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='105' />
+            </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' filter-group='7'>
-            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='2' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='201' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]</column>
@@ -1927,6 +1913,15 @@
             <encodings>
               <text column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[usr:Calculation_298644985681244160:qk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Hour of Date:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[hr:date (passenger_location2):ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Buses Occupation:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[usr:Calculation_298644985681244160:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
@@ -1946,128 +1941,12 @@
       </table>
       <simple-id uuid='{E218020D-340E-4DC7-8923-5DC8AC478BFD}' />
     </worksheet>
-    <worksheet name='pass_days'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-            <column-instance column='[ticket_number]' derivation='Count' name='[cnt:ticket_number:qk]' pivot='key' type='quantitative' />
-            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
-            <column-instance column='[date]' derivation='Day' name='[dy:date:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[operation]' derivation='None' name='[none:operation:nk]' pivot='key' type='nominal' />
-            <column caption='Operation' datatype='string' name='[operation]' role='dimension' type='nominal' />
-            <column caption='Ticket Number' datatype='string' name='[ticket_number]' role='dimension' type='nominal' />
-          </datasource-dependencies>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='cell'>
-            <format attr='width' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]' value='149' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:operation:nk]' />
-              <text column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
-                <format attr='mark-labels-cull' value='true' />
-              </style-rule>
-              <style-rule element='pane'>
-                <format attr='minwidth' value='-1' />
-                <format attr='maxwidth' value='-1' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number:qk]</rows>
-        <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]</cols>
-      </table>
-      <simple-id uuid='{B274B389-9D69-48A5-908D-3D0524188F26}' />
-    </worksheet>
-    <worksheet name='pass_hours'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-            <datasource caption='Parámetros' name='Parameters' />
-          </datasources>
-          <datasource-dependencies datasource='Parameters'>
-            <column caption='Fecha dinámica' datatype='string' name='[Parámetro 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;minute&quot;'>
-              <calculation class='tableau' formula='&quot;minute&quot;' />
-            </column>
-          </datasource-dependencies>
-          <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-            <column caption='Fecha Flexible' datatype='datetime' name='[Calculation_883549986970107908]' role='dimension' type='ordinal'>
-              <calculation class='tableau' formula='DATETRUNC([Parameters].[Parámetro 1],[date])' />
-            </column>
-            <column-instance column='[ticket_number]' derivation='Count' name='[cnt:ticket_number:qk]' pivot='key' type='quantitative' />
-            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
-            <column-instance column='[date]' derivation='Day' name='[dy:date:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[Calculation_883549986970107908]' derivation='None' name='[none:Calculation_883549986970107908:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[Calculation_883549986970107908]' derivation='None' name='[none:Calculation_883549986970107908:qk]' pivot='key' type='quantitative' />
-            <column caption='Ticket Number' datatype='string' name='[ticket_number]' role='dimension' type='nominal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]'>
-            <groupfilter function='member' level='[dy:date:ok]' member='26' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
-          </filter>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:Calculation_883549986970107908:ok]'>
-            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
-              <groupfilter function='level-members' level='[none:Calculation_883549986970107908:ok]' />
-              <groupfilter function='union'>
-                <groupfilter function='member' level='[none:Calculation_883549986970107908:ok]' member='#2022-03-21 00:00:00#' />
-                <groupfilter function='member' level='[none:Calculation_883549986970107908:ok]' member='#2022-03-21 00:02:00#' />
-                <groupfilter function='member' level='[none:Calculation_883549986970107908:ok]' member='#2022-03-21 05:15:00#' />
-              </groupfilter>
-            </groupfilter>
-          </filter>
-          <slices>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]</column>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:Calculation_883549986970107908:ok]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='refline'>
-            <format attr='fill-above' id='refline0' value='#00000000' />
-            <format attr='fill-below' id='refline0' value='#00000000' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <text column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
-                <format attr='mark-labels-cull' value='true' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number:qk]</rows>
-        <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:Calculation_883549986970107908:qk]</cols>
-      </table>
-      <simple-id uuid='{6223075F-16E9-4738-806B-33A8F688AC1C}' />
-    </worksheet>
-    <worksheet name='pass_hours_dinamic'>
+    <worksheet name='pass_route_day'>
       <layout-options>
         <title>
-          <formatted-text />
+          <formatted-text>
+            <run fontalignment='1'>Pasajeros - Franja Horaria</run>
+          </formatted-text>
         </title>
       </layout-options>
       <table>
@@ -2076,193 +1955,9 @@
             <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
           </datasources>
           <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-            <column-instance column='[ticket_number (passenger_location2)]' derivation='Count' name='[cnt:ticket_number (passenger_location2):qk]' pivot='key' type='quantitative' />
-            <column caption='Date (Passenger Location2)' datatype='datetime' name='[date (passenger_location2)]' role='dimension' type='ordinal' />
-            <column-instance column='[date (passenger_location2)]' derivation='Day' name='[dy:date (passenger_location2):ok]' pivot='key' type='ordinal' />
-            <column-instance column='[date (passenger_location2)]' derivation='Hour-Trunc' name='[thr:date (passenger_location2):ok]' pivot='key' type='ordinal' />
-            <column-instance column='[date (passenger_location2)]' derivation='Hour-Trunc' name='[thr:date (passenger_location2):qk]' pivot='key' type='quantitative' />
-            <column caption='Ticket Number (Passenger Location2)' datatype='string' name='[ticket_number (passenger_location2)]' role='dimension' type='nominal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='6'>
-            <groupfilter function='level-members' level='[dy:date (passenger_location2):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
-          <slices>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='axis'>
-            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[thr:date (passenger_location2):qk]' field-type='quantitative' major-origin='#2022-03-24 11:00:00#' major-spacing='1.0' major-units='days' scope='cols' type='space' />
-            <format attr='title' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[thr:date (passenger_location2):qk]' scope='cols' value='' />
-            <format attr='width' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' value='68' />
-            <format attr='title' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' scope='rows' value='' />
-            <format attr='stroke-size' value='0' />
-            <format attr='line-visibility' value='off' />
-            <format attr='tick-color' value='#00000000' />
-          </style-rule>
-          <style-rule element='cell'>
-            <format attr='color' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' value='#ffffff' />
-            <format attr='color' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[thr:date (passenger_location2):qk]' value='#ff9d9a' />
-          </style-rule>
-          <style-rule element='label'>
-            <format attr='color' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' value='#ff9d9a' />
-          </style-rule>
-          <style-rule element='table'>
-            <format attr='background-color' value='#00000000' />
-          </style-rule>
-          <style-rule element='worksheet'>
-            <format attr='color' value='#f1ce63' />
-            <format attr='font-size' value='5' />
-          </style-rule>
-          <style-rule element='dropline'>
-            <format attr='stroke-size' value='0' />
-            <format attr='line-visibility' value='off' />
-          </style-rule>
-          <style-rule element='refline'>
-            <format attr='stroke-size' value='0' />
-            <format attr='line-visibility' value='off' />
-          </style-rule>
-          <style-rule element='gridline'>
-            <format attr='stroke-size' value='0' />
-          </style-rule>
-          <style-rule element='zeroline'>
-            <format attr='stroke-size' value='0' />
-            <format attr='line-visibility' value='off' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Square' />
-            <encodings>
-              <text column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-cull' value='true' />
-                <format attr='mark-labels-show' value='true' />
-                <format attr='mark-color' value='#ff9d9a' />
-              </style-rule>
-              <style-rule element='trendline'>
-                <format attr='stroke-size' value='0' />
-                <format attr='line-visibility' value='off' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]</rows>
-        <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[thr:date (passenger_location2):qk]</cols>
-        <pages>
-          <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[thr:date (passenger_location2):ok]</column>
-        </pages>
-        <page-trail-options enabled='true' lines='true' mark-type='all' />
-      </table>
-      <simple-id uuid='{4D45A25F-CE3F-478B-8968-EDB2D25815FA}' />
-    </worksheet>
-    <worksheet name='pass_hr'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-            <column-instance column='[ticket_number (passenger_location2)]' derivation='Count' name='[cnt:ticket_number (passenger_location2):qk]' pivot='key' type='quantitative' />
-            <column caption='Date (Passenger Location2)' datatype='datetime' name='[date (passenger_location2)]' role='dimension' type='ordinal' />
-            <column-instance column='[date (passenger_location2)]' derivation='Day' name='[dy:date (passenger_location2):ok]' pivot='key' type='ordinal' />
-            <column-instance column='[date (passenger_location2)]' derivation='Hour' name='[hr:date (passenger_location2):ok]' pivot='key' type='ordinal' />
-            <column caption='Ticket Number (Passenger Location2)' datatype='string' name='[ticket_number (passenger_location2)]' role='dimension' type='nominal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='6'>
-            <groupfilter function='level-members' level='[dy:date (passenger_location2):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
-          <slices>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='worksheet'>
-            <format attr='display-field-labels' scope='cols' value='false' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Automatic' />
-          </pane>
-        </panes>
-        <rows>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]</rows>
-        <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[hr:date (passenger_location2):ok]</cols>
-      </table>
-      <simple-id uuid='{45B6937D-6137-4793-BF55-789B8896C81A}' />
-    </worksheet>
-    <worksheet name='pass_route1'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-            <column-instance column='[ticket_number]' derivation='Count' name='[cnt:ticket_number:qk]' pivot='key' type='quantitative' />
-            <column caption='Date' datatype='datetime' name='[date]' role='dimension' type='ordinal' />
-            <column-instance column='[date]' derivation='Day' name='[dy:date:ok]' pivot='key' type='ordinal' />
-            <column-instance column='[route_code (passengers)]' derivation='None' name='[none:route_code (passengers):ok]' pivot='key' type='ordinal' />
-            <column caption='Route Code (Passengers)' datatype='integer' name='[route_code (passengers)]' role='dimension' type='ordinal' />
-            <column caption='Ticket Number' datatype='string' name='[ticket_number]' role='dimension' type='nominal' />
-          </datasource-dependencies>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]'>
-            <groupfilter function='level-members' level='[dy:date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
-          </filter>
-          <slices>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]</column>
-          </slices>
-          <aggregation value='true' />
-        </view>
-        <style>
-          <style-rule element='cell'>
-            <format attr='width' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]' value='137' />
-            <format attr='width' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passengers):ok]' value='30' />
-          </style-rule>
-        </style>
-        <panes>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
-            <view>
-              <breakdown value='auto' />
-            </view>
-            <mark class='Bar' />
-            <encodings>
-              <color column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passengers):ok]' />
-              <text column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number:qk]' />
-            </encodings>
-            <style>
-              <style-rule element='mark'>
-                <format attr='mark-labels-show' value='true' />
-                <format attr='mark-labels-cull' value='true' />
-              </style-rule>
-              <style-rule element='pane'>
-                <format attr='minwidth' value='-1' />
-                <format attr='maxwidth' value='-1' />
-              </style-rule>
-            </style>
-          </pane>
-        </panes>
-        <rows>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number:qk]</rows>
-        <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passengers):ok]</cols>
-      </table>
-      <simple-id uuid='{A4A57BF9-AD6F-41DC-A934-B6C7B38F170C}' />
-    </worksheet>
-    <worksheet name='pass_route_day'>
-      <table>
-        <view>
-          <datasources>
-            <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-          </datasources>
-          <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
+            <column caption='Mean Passengers' datatype='real' name='[Calculation_298644985681244160]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNT([ticket_number (passenger_location2)])/ COUNTD([bus (passenger_location2)])' />
+            </column>
             <column caption='Bus (Passenger Location2)' datatype='integer' name='[bus (passenger_location2)]' role='measure' type='quantitative' />
             <column-instance column='[ticket_number (passenger_location2)]' derivation='Count' name='[cnt:ticket_number (passenger_location2):qk]' pivot='key' type='quantitative' />
             <column-instance column='[bus (passenger_location2)]' derivation='CountD' name='[ctd:bus (passenger_location2):qk]' pivot='key' type='quantitative' />
@@ -2274,15 +1969,22 @@
             <column-instance column='[route_code (passenger_location2)]' derivation='None' name='[none:route_code (passenger_location2):ok]' pivot='key' type='ordinal' />
             <column caption='Route Code (Passenger Location2)' datatype='integer' name='[route_code (passenger_location2)]' role='dimension' type='ordinal' />
             <column caption='Ticket Number (Passenger Location2)' datatype='string' name='[ticket_number (passenger_location2)]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_298644985681244160]' derivation='User' name='[usr:Calculation_298644985681244160:qk]' pivot='key' type='quantitative' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='5'>
             <groupfilter function='member' level='[dy:date (passenger_location2):ok]' member='21' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' filter-group='4'>
-            <groupfilter function='level-members' level='[none:line_code (passenger_location2):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' filter-group='8'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='101' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='102' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='103' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='104' />
+              <groupfilter function='member' level='[none:line_code (passenger_location2):ok]' member='105' />
+            </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' filter-group='7'>
-            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='2' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='201' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]</column>
@@ -2292,11 +1994,32 @@
           <aggregation value='true' />
         </view>
         <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' scope='rows' value='' />
+            <format attr='height' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[hr:date (passenger_location2):ok]' value='22' />
+          </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='cols' value='false' />
           </style-rule>
           <style-rule element='refline'>
             <format attr='text-format' id='refline0' value='n#,##0;-#,##0' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' value='Day of Date'>
+              <formatted-text>
+                <run>Day of Date</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' value='Route Code'>
+              <formatted-text>
+                <run>Route Code</run>
+              </formatted-text>
+            </format>
+            <format attr='title' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' value='Line Code'>
+              <formatted-text>
+                <run>Line Code</run>
+              </formatted-text>
+            </format>
           </style-rule>
         </style>
         <panes>
@@ -2308,12 +2031,29 @@
             <encodings>
               <text column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' />
               <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[ctd:bus (passenger_location2):qk]' />
+              <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[usr:Calculation_298644985681244160:qk]' />
             </encodings>
             <reference-line axis-column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-table' value-column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' z-order='1' />
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Hour of Day:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[hr:date (passenger_location2):ok]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Nº of Passengers:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Nº of Buses:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[ctd:bus (passenger_location2):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Bus Ocuppation:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[usr:Calculation_298644985681244160:qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
             <style>
               <style-rule element='mark'>
                 <format attr='mark-labels-show' value='true' />
                 <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#31bdf6' />
               </style-rule>
             </style>
           </pane>
@@ -2323,7 +2063,7 @@
       </table>
       <simple-id uuid='{04B888BA-D3FE-4804-A47F-697F97CA4CEC}' />
     </worksheet>
-    <worksheet name='pass_stop'>
+    <worksheet name='stop_ida'>
       <layout-options>
         <title>
           <formatted-text>
@@ -2344,31 +2084,42 @@
             <column-instance column='[date (passenger_location2)]' derivation='Day' name='[dy:date (passenger_location2):ok]' pivot='key' type='ordinal' />
             <column-instance column='[date (passenger_location2)]' derivation='Hour' name='[hr:date (passenger_location2):ok]' pivot='key' type='ordinal' />
             <column caption='Line Code (Passenger Location2)' datatype='integer' name='[line_code (passenger_location2)]' role='dimension' type='ordinal' />
+            <column caption='Line Code' datatype='integer' name='[line_code]' role='dimension' type='ordinal' />
+            <column caption='Line Name' datatype='string' name='[line_name]' role='dimension' type='nominal' />
             <column-instance column='[line_code (passenger_location2)]' derivation='None' name='[none:line_code (passenger_location2):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[line_code]' derivation='None' name='[none:line_code:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[line_name]' derivation='None' name='[none:line_name:nk]' pivot='key' type='nominal' />
             <column-instance column='[route_code (passenger_location2)]' derivation='None' name='[none:route_code (passenger_location2):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[route_code]' derivation='None' name='[none:route_code:ok]' pivot='key' type='ordinal' />
             <column-instance column='[stop_order]' derivation='None' name='[none:stop_order:qk]' pivot='key' type='quantitative' />
             <column caption='Route Code (Passenger Location2)' datatype='integer' name='[route_code (passenger_location2)]' role='dimension' type='ordinal' />
+            <column caption='Route Code' datatype='integer' name='[route_code]' role='dimension' type='ordinal' />
             <column caption='Stop Code (Passenger Location2)' datatype='integer' name='[stop_code (passenger_location2)]' role='dimension' type='ordinal' />
             <column caption='Stop Name (Passenger Location2)' datatype='string' name='[stop_name (passenger_location2)]' role='dimension' type='nominal' />
             <column caption='Stop Order' datatype='integer' name='[stop_order]' role='measure' type='quantitative' />
             <column caption='Ticket Number (Passenger Location2)' datatype='string' name='[ticket_number (passenger_location2)]' role='dimension' type='nominal' />
           </datasource-dependencies>
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Action (HOUR(Date (Passenger Location2)))]'>
-            <groupfilter function='level-members' level='[hr:date (passenger_location2):ok]' user:ui-action-filter='[Action1_8D29C3E7F25E4F3987CCF9A895210276]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+            <groupfilter function='level-members' level='[hr:date (passenger_location2):ok]' user:ui-action-filter='[Action2_94E4A20824364C3A87268B23E2496769]' user:ui-enumeration='all' user:ui-marker='enumerate' />
           </filter>
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='5'>
             <groupfilter function='member' level='[dy:date (passenger_location2):ok]' member='21' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
-          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' filter-group='4'>
-            <groupfilter function='level-members' level='[none:line_code (passenger_location2):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:line_code:ok]' member='101' />
+              <groupfilter function='member' level='[none:line_code:ok]' member='102' />
+              <groupfilter function='member' level='[none:line_code:ok]' member='103' />
+              <groupfilter function='member' level='[none:line_code:ok]' member='105' />
+            </groupfilter>
           </filter>
           <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' filter-group='7'>
-            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='2' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='201' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
           </filter>
           <slices>
             <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]</column>
-            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]</column>
             <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]</column>
+            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code:ok]</column>
             <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Action (HOUR(Date (Passenger Location2)))]</column>
           </slices>
           <aggregation value='true' />
@@ -2377,9 +2128,18 @@
           <style-rule element='axis'>
             <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]' field-type='quantitative' min='0' range-type='fixedmin' scope='cols' type='space' />
             <format attr='title' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]' scope='cols' value='' />
           </style-rule>
           <style-rule element='worksheet'>
             <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='border-style' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='border-color' value='#000000' />
           </style-rule>
         </style>
         <panes>
@@ -2390,93 +2150,414 @@
             <mark class='Automatic' />
             <encodings>
               <color column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' />
+              <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_name:nk]' />
+              <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code:ok]' />
               <tooltip column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_code (passenger_location2):qk]' />
               <tooltip column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_name (passenger_location2):nk]' />
             </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Line Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Stop Order:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Stop Code:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_code (passenger_location2):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Stop Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_name (passenger_location2):nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Nº of Passengers:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
           </pane>
         </panes>
         <rows>([federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok] * [federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk])</rows>
         <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]</cols>
       </table>
-      <simple-id uuid='{411CAE85-5712-4798-A2C8-E0B957D75AC2}' />
+      <simple-id uuid='{7C9D7D70-D5A2-4B4A-A253-D93E4EF0A484}' />
+    </worksheet>
+    <worksheet name='stop_vuelta'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Pasajeros - Parada</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
+            <column-instance column='[stop_code (passenger_location2)]' derivation='Attribute' name='[attr:stop_code (passenger_location2):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[stop_name (passenger_location2)]' derivation='Attribute' name='[attr:stop_name (passenger_location2):nk]' pivot='key' type='nominal' />
+            <column-instance column='[ticket_number (passenger_location2)]' derivation='Count' name='[cnt:ticket_number (passenger_location2):qk]' pivot='key' type='quantitative' />
+            <column caption='Date (Passenger Location2)' datatype='datetime' name='[date (passenger_location2)]' role='dimension' type='ordinal' />
+            <column-instance column='[date (passenger_location2)]' derivation='Day' name='[dy:date (passenger_location2):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[date (passenger_location2)]' derivation='Hour' name='[hr:date (passenger_location2):ok]' pivot='key' type='ordinal' />
+            <column caption='Line Code (Passenger Location2)' datatype='integer' name='[line_code (passenger_location2)]' role='dimension' type='ordinal' />
+            <column caption='Line Code' datatype='integer' name='[line_code]' role='dimension' type='ordinal' />
+            <column caption='Line Name' datatype='string' name='[line_name]' role='dimension' type='nominal' />
+            <column-instance column='[line_code (passenger_location2)]' derivation='None' name='[none:line_code (passenger_location2):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[line_code]' derivation='None' name='[none:line_code:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[line_name]' derivation='None' name='[none:line_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[route_code (passenger_location2)]' derivation='None' name='[none:route_code (passenger_location2):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[route_code]' derivation='None' name='[none:route_code:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[stop_order]' derivation='None' name='[none:stop_order:qk]' pivot='key' type='quantitative' />
+            <column caption='Route Code (Passenger Location2)' datatype='integer' name='[route_code (passenger_location2)]' role='dimension' type='ordinal' />
+            <column caption='Route Code' datatype='integer' name='[route_code]' role='dimension' type='ordinal' />
+            <column caption='Stop Code (Passenger Location2)' datatype='integer' name='[stop_code (passenger_location2)]' role='dimension' type='ordinal' />
+            <column caption='Stop Name (Passenger Location2)' datatype='string' name='[stop_name (passenger_location2)]' role='dimension' type='nominal' />
+            <column caption='Stop Order' datatype='integer' name='[stop_order]' role='measure' type='quantitative' />
+            <column caption='Ticket Number (Passenger Location2)' datatype='string' name='[ticket_number (passenger_location2)]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Action (HOUR(Date (Passenger Location2)))]'>
+            <groupfilter function='level-members' level='[hr:date (passenger_location2):ok]' user:ui-action-filter='[Action2_94E4A20824364C3A87268B23E2496769]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' filter-group='5'>
+            <groupfilter function='member' level='[dy:date (passenger_location2):ok]' member='21' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:line_code:ok]' member='201' />
+              <groupfilter function='member' level='[none:line_code:ok]' member='202' />
+              <groupfilter function='member' level='[none:line_code:ok]' member='203' />
+              <groupfilter function='member' level='[none:line_code:ok]' member='205' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' filter-group='7'>
+            <groupfilter function='member' level='[none:route_code (passenger_location2):ok]' member='201' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]</column>
+            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]</column>
+            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code:ok]</column>
+            <column>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[Action (HOUR(Date (Passenger Location2)))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]' field-type='quantitative' min='0' range-type='fixedmin' reverse='true' scope='cols' type='space' />
+            <format attr='title' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' scope='rows' value='' />
+            <format attr='title' class='0' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]' scope='cols' value='' />
+            <format attr='width' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' value='44' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' value='72' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='caption'>
+            <format attr='border-style' value='solid' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' />
+              <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_name:nk]' />
+              <lod column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code:ok]' />
+              <tooltip column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_code (passenger_location2):qk]' />
+              <tooltip column='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_name (passenger_location2):nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Line Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_name:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Stop Order:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Stop Code:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_code (passenger_location2):qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Stop Name:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[attr:stop_name (passenger_location2):nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Nº of Passengers:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+          </pane>
+        </panes>
+        <rows>([federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok] * [federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk])</rows>
+        <cols>[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:stop_order:qk]</cols>
+      </table>
+      <simple-id uuid='{14784CC6-9A38-494F-BF88-A3A5AE4CA5D2}' />
     </worksheet>
   </worksheets>
   <dashboards>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Lineas'>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Conclusiones'>
       <style />
       <size sizing-mode='automatic' />
-      <datasources>
-        <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-      </datasources>
-      <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-        <column caption='Date (Passenger Location2)' datatype='datetime' name='[date (passenger_location2)]' role='dimension' type='ordinal' />
-        <column-instance column='[date (passenger_location2)]' derivation='Day' name='[dy:date (passenger_location2):ok]' pivot='key' type='ordinal' />
-        <column caption='Line Code (Passenger Location2)' datatype='integer' name='[line_code (passenger_location2)]' role='dimension' type='ordinal' />
-        <column-instance column='[line_code (passenger_location2)]' derivation='None' name='[none:line_code (passenger_location2):ok]' pivot='key' type='ordinal' />
-        <column-instance column='[route_code (passenger_location2)]' derivation='None' name='[none:route_code (passenger_location2):ok]' pivot='key' type='ordinal' />
-        <column caption='Route Code (Passenger Location2)' datatype='integer' name='[route_code (passenger_location2)]' role='dimension' type='ordinal' />
-      </datasource-dependencies>
       <zones>
-        <zone h='44948' id='1' name='pass_route_day' show-title='false' w='100060' x='-362' y='9988' />
-        <zone h='6156' id='2' mode='dropdown' name='pass_route_day' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type-v2='filter' w='9656' x='2535' y='813' />
-        <zone h='6156' id='3' mode='dropdown' name='pass_route_day' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' type-v2='filter' w='9644' x='22061' y='697' />
-        <zone h='6156' id='4' mode='checkdropdown' name='pass_route_day' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type-v2='filter' w='9644' x='38819' y='581' />
-        <zone h='3020' id='5' name='bus_hr' show-title='false' w='96681' x='3380' y='55981' />
-        <zone h='2671' id='6' name='pass_bus' show-title='false' w='97046' x='3677' y='8014' />
-        <zone h='40999' id='7' name='pass_stop' w='99819' x='60' y='59582' />
-      </zones>
-      <simple-id uuid='{DB0E3021-8248-415F-A740-34233FF0A850}' />
-    </dashboard>
-    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Mapa Dinamico 2'>
-      <style />
-      <size sizing-mode='automatic' />
-      <datasources>
-        <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
-      </datasources>
-      <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
-        <column caption='Date (Passenger Location2)' datatype='datetime' name='[date (passenger_location2)]' role='dimension' type='ordinal' />
-        <column-instance column='[date (passenger_location2)]' derivation='Day' name='[dy:date (passenger_location2):ok]' pivot='key' type='ordinal' />
-      </datasource-dependencies>
-      <zones>
-        <zone h='106969' id='3' name='map_stops_dinamic' w='99879' x='121' y='-116' />
-        <zone h='6156' id='4' mode='dropdown' name='map_stops_dinamic' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type-v2='filter' w='9644' x='11031' y='27875' />
-        <zone count='1' h='12892' id='7' name='map_stops_dinamic' name1='pass_hours_dinamic' synchronized='1' type-v2='currpage' w='9644' x='482' y='28223' />
-        <zone h='21719' id='8' name='pass_hours_dinamic' w='49488' x='181' y='4530' />
+        <zone h='100000' id='2' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone forceUpdate='true' h='98142' id='1' type-v2='text' w='49402' x='483' y='929'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#31bdf6' fontsize='36' underline='true'>CONCLUSIONES</run>
+              <run fontalignment='1'>Æ&#10;&#10;&#10;&#10;&#10;</run>
+              <run>Æ&#10;</run>
+              <run fontsize='22'>Æ </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+              <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'> Lineas con baja afluencia que se solapan con </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>            otras.</run>
+              <run>Æ
+
+
+                                           </run>
+              <run fontsize='16'>Linea 22 (Baja Afluencia) - Lineas 1 y 3</run>
+              <run>Æ&#10;&#10;&#10;</run>
+              <run fontsize='22'>Æ </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+              <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'> Lineas que pueden optimizar el número </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>          de vehículos en franjas horarias.</run>
+              <run>Æ
+
+
+                                           </run>
+              <run fontsize='16'>Linea 9 (Ajuste de vehículos a las 10:00)</run>
+              <run>Æ&#10;&#10;&#10;</run>
+              <run fontsize='22'>Æ </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+              <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'> Lineas con dimensionamiento no ajustado:</run>
+              <run>Æ&#10;&#10;&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>Æ  </run>
+              <run>Æ                                           </run>
+              <run fontsize='16'>Linea 104 (Inicio de parada sin viajeros)</run>
+              <run>Æ&#10;&#10;&#10;</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='98142' id='3' type-v2='text' w='49632' x='49885' y='929'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontcolor='#31bdf6' fontsize='36' underline='true'>SIGUIENTES PASOS</run>
+              <run fontalignment='1'>Æ&#10;&#10;</run>
+              <run>Æ&#10;</run>
+              <run fontsize='22'>Æ </run>
+              <run>Æ&#10;&#10;</run>
+              <run fontsize='22'>Æ </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+              <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'> Obtener km. entre paradas para analizar el ratio </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>            pasajeros/km para ver rentabilidad de lineas</run>
+              <run>Æ&#10;&#10;&#10;&#10;&#10;</run>
+              <run fontsize='22'>Æ </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+              <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'> Obtener posicionamiento intantaneo del </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>            vehículo para optimizar velocidades </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>            comerciales y frecuencias.</run>
+              <run>Æ&#10;&#10;&#10;&#10;&#10;</run>
+              <run fontsize='22'>Æ </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+              <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+              <run bold='true' fontcolor='#000000' fontsize='22'> Estudio de consumos vehiculo y conductor, para </run>
+              <run>Æ&#10;</run>
+              <run bold='true' fontcolor='#000000' fontsize='22'>            mejorar la conducción eficiente.</run>
+              <run>Æ&#10;&#10;&#10;&#10;&#10;&#10;</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='solid' />
+              <format attr='border-width' value='3' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='95935' hidden-by-user='true' id='14' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/solape_22_1_3.png' type-v2='bitmap' w='48340' x='50573' y='1974'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='9872' id='15' type-v2='dashboard-object' w='5432' x='2716' y='38792'>
+          <button action='' active-visual-state-index='1'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{8C62BF55-2AC3-4A29-B456-2E8435F71F94}&quot; zone-id=&quot;15&quot; zone-ids=[14]</toggle-action>
+            <button-visual-state>
+              <image-path>C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/DB35.gif</image-path>
+            </button-visual-state>
+            <button-visual-state>
+              <image-path>C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/DB35.gif</image-path>
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='9872' id='22' type-v2='dashboard-object' w='5432' x='2655' y='60163'>
+          <button action='' active-visual-state-index='1'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{8C62BF55-2AC3-4A29-B456-2E8435F71F94}&quot; zone-id=&quot;22&quot; zone-ids=[25]</toggle-action>
+            <button-visual-state>
+              <image-path>C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/DB35.gif</image-path>
+            </button-visual-state>
+            <button-visual-state>
+              <image-path>C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/DB35.gif</image-path>
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='9872' id='23' type-v2='dashboard-object' w='5432' x='2716' y='77933'>
+          <button action='' active-visual-state-index='1'>
+            <toggle-action>tabdoc:toggle-button-click-action window-id=&quot;{8C62BF55-2AC3-4A29-B456-2E8435F71F94}&quot; zone-id=&quot;23&quot; zone-ids=[24]</toggle-action>
+            <button-visual-state>
+              <image-path>C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/DB35.gif</image-path>
+            </button-visual-state>
+            <button-visual-state>
+              <image-path>C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/DB35.gif</image-path>
+            </button-visual-state>
+          </button>
+        </zone>
+        <zone h='95587' hidden-by-user='true' id='24' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/grafico_paradas.png' type-v2='bitmap' w='48401' x='50453' y='2091' />
+        <zone h='95819' hidden-by-user='true' id='25' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/franjas_horarias.png' type-v2='bitmap' w='48340' x='50573' y='1974'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='700' minheight='700' sizing-mode='vscroll' />
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98142' id='13' param='vert' type-v2='layout-flow' w='99034' x='483' y='929'>
-                <zone h='6156' id='4' mode='dropdown' name='map_stops_dinamic' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type-v2='filter' w='9644' x='11031' y='27875'>
+            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98142' id='40' param='vert' type-v2='layout-flow' w='99034' x='483' y='929'>
+                <zone forceUpdate='true' h='98142' id='1' type-v2='text' w='49404' x='483' y='929'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#31bdf6' fontsize='36' underline='true'>CONCLUSIONES</run>
+                    <run fontalignment='1'>Æ&#10;&#10;&#10;&#10;&#10;</run>
+                    <run>Æ&#10;</run>
+                    <run fontsize='22'>Æ </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+                    <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'> Lineas con baja afluencia que se solapan con </run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>            otras.</run>
+                    <run>Æ
+
+
+                                           </run>
+                    <run fontsize='16'>Linea 22 (Baja Afluencia) - Lineas 1 y 3</run>
+                    <run>Æ&#10;&#10;&#10;</run>
+                    <run fontsize='22'>Æ </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+                    <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'> Lineas que pueden optimizar el número </run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>          de vehículos en franjas horarias.</run>
+                    <run>Æ
+
+
+                                           </run>
+                    <run fontsize='16'>Linea 9 (Ajuste de vehículos a las 10:00)</run>
+                    <run>Æ&#10;&#10;&#10;</run>
+                    <run fontsize='22'>Æ </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+                    <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'> Lineas con dimensionamiento no ajustado:</run>
+                    <run>Æ&#10;&#10;&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>Æ  </run>
+                    <run>Æ                                           </run>
+                    <run fontsize='16'>Linea 104 (Inicio de parada sin viajeros)</run>
+                    <run>Æ&#10;&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='98142' id='3' type-v2='text' w='49630' x='49887' y='929'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontcolor='#31bdf6' fontsize='36' underline='true'>SIGUIENTES PASOS</run>
+                    <run fontalignment='1'>Æ&#10;&#10;</run>
+                    <run>Æ&#10;</run>
+                    <run fontsize='22'>Æ </run>
+                    <run>Æ&#10;&#10;</run>
+                    <run fontsize='22'>Æ </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+                    <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'> Obtener km. entre paradas para analizar el ratio </run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>            pasajeros/km para ver rentabilidad de lineas</run>
+                    <run>Æ&#10;&#10;&#10;&#10;&#10;</run>
+                    <run fontsize='22'>Æ </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+                    <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'> Obtener posicionamiento intantaneo del </run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>            vehículo para optimizar velocidades </run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>            comerciales y frecuencias.</run>
+                    <run>Æ&#10;&#10;&#10;&#10;&#10;</run>
+                    <run fontsize='22'>Æ </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>Æ     </run>
+                    <run bold='true' fontcolor='#000000' fontname='-apple-system,system-ui,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Fira Sans,Ubuntu,Oxygen,Oxygen Sans,Cantarell,Droid Sans,Apple Color Emoji,Segoe UI Emoji,Segoe UI Emoji,Segoe UI Symbol,Lucida Grande,Helvetica,Arial,sans-serif' fontsize='24'>o </run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'> Estudio de consumos vehiculo y conductor, para </run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontsize='22'>            mejorar la conducción eficiente.</run>
+                    <run>Æ&#10;&#10;&#10;&#10;&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='3' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='95935' id='14' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/solape_22_1_3.png' type-v2='bitmap' w='48340' x='50573' y='1974'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
                     <format attr='border-width' value='0' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='280' h='106969' id='3' is-fixed='true' name='map_stops_dinamic' w='99879' x='121' y='-116'>
+                <zone fixed-size='280' h='95819' id='25' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/franjas_horarias.png' type-v2='bitmap' w='48340' x='50573' y='1974'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
                     <format attr='border-width' value='0' />
                     <format attr='margin' value='4' />
                     <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
                   </zone-style>
                 </zone>
-                <zone fixed-size='174' h='21719' id='8' is-fixed='true' name='pass_hours_dinamic' w='49488' x='181' y='4530'>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-                <zone count='1' h='12892' id='7' name='map_stops_dinamic' name1='pass_hours_dinamic' synchronized='1' type-v2='currpage' w='9644' x='482' y='28223'>
+                <zone fixed-size='280' h='95587' id='24' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/grafico_paradas.png' type-v2='bitmap' w='48401' x='50453' y='2091'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2496,7 +2577,106 @@
           </zones>
         </devicelayout>
       </devicelayouts>
-      <simple-id uuid='{CC4C6FA8-8D0A-4912-933E-A7F114A49609}' />
+      <simple-id uuid='{85EF2CE5-387E-49F2-BAE1-B3A3C3EDCF2E}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Despedida'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='27294' id='4' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/ironhack.jpeg' type-v2='bitmap' w='13906' x='1088' y='1742' />
+        <zone h='21951' id='5' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/bus_stop.jpg' type-v2='bitmap' w='22854' x='-181' y='79443' />
+        <zone forceUpdate='true' h='15447' id='6' type-v2='text' w='55683' x='3144' y='44135'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#31bdf6' fontname='Verdana' fontsize='48'>MUCHAS GRACIAS</run>
+            <run fontalignment='1'>Æ&#10;&#10;&#10;</run>
+          </formatted-text>
+        </zone>
+        <zone h='101278' id='9' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/simpson.jpg' type-v2='bitmap' w='35792' x='64027' y='1161' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='47' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98142' id='46' param='vert' type-v2='layout-flow' w='99034' x='483' y='929'>
+                <zone fixed-size='280' h='101278' id='9' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/simpson.jpg' type-v2='bitmap' w='35792' x='64027' y='1161'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='218' h='27294' id='4' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/ironhack.jpeg' type-v2='bitmap' w='13906' x='1088' y='1742'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='15447' id='6' type-v2='text' w='55683' x='3144' y='44135'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#31bdf6' fontname='Verdana' fontsize='48'>MUCHAS GRACIAS</run>
+                    <run fontalignment='1'>Æ&#10;&#10;&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='175' h='21951' id='5' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/bus_stop.jpg' type-v2='bitmap' w='22854' x='-181' y='79443'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{5E72C50F-65C8-4954-9F34-9D25C7FBC2F4}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Lineas'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='topology2+ (transport_network)' name='federated.1q3zlit0cnqvpt1cylnag00yk70j' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1q3zlit0cnqvpt1cylnag00yk70j'>
+        <column caption='Date (Passenger Location2)' datatype='datetime' name='[date (passenger_location2)]' role='dimension' type='ordinal' />
+        <column-instance column='[date (passenger_location2)]' derivation='Day' name='[dy:date (passenger_location2):ok]' pivot='key' type='ordinal' />
+        <column caption='Line Code (Passenger Location2)' datatype='integer' name='[line_code (passenger_location2)]' role='dimension' type='ordinal' />
+        <column-instance column='[line_code (passenger_location2)]' derivation='None' name='[none:line_code (passenger_location2):ok]' pivot='key' type='ordinal' />
+        <column-instance column='[route_code (passenger_location2)]' derivation='None' name='[none:route_code (passenger_location2):ok]' pivot='key' type='ordinal' />
+        <column caption='Route Code (Passenger Location2)' datatype='integer' name='[route_code (passenger_location2)]' role='dimension' type='ordinal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='6156' id='2' mode='dropdown' name='bus_hr' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type-v2='filter' w='9656' x='2535' y='813' />
+        <zone h='6156' id='3' mode='dropdown' name='bus_hr' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' type-v2='filter' w='9644' x='22061' y='697' />
+        <zone h='6156' id='4' mode='checkdropdown' name='bus_hr' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type-v2='filter' w='9644' x='38819' y='581' />
+        <zone h='3020' id='5' name='bus_hr' show-title='false' w='96500' x='3380' y='56562' />
+        <zone h='2671' id='6' name='pass_bus' show-title='false' w='97032' x='2726' y='7317' />
+        <zone h='45645' id='8' name='pass_route_day' w='98970' x='969' y='9756' />
+        <zone h='20790' id='9' name='stop_ida' w='99276' x='483' y='60859' />
+        <zone h='16957' id='12' name='stop_vuelta' show-title='false' w='99819' x='241' y='81649' />
+      </zones>
+      <simple-id uuid='{AB0CC409-410F-42F9-B1C7-32C69C92B669}' />
     </dashboard>
     <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Mapa Dinámico'>
       <style />
@@ -2530,14 +2710,14 @@
           </zone-style>
         </zone>
         <zone h='7085' id='8' mode='dropdown' name='map_stops_dinamic' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type-v2='filter' w='10380' x='1690' y='7666' />
-        <zone h='13821' id='11' name='map_stops_dinamic' synchronized='1' type-v2='currpage' w='10380' x='1147' y='82114' />
+        <zone h='13821' id='11' looped='1' name='map_stops_dinamic' synchronized='1' type-v2='currpage' w='10380' x='1147' y='82114' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='41' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98142' id='40' param='vert' type-v2='layout-flow' w='99034' x='483' y='929'>
+            <zone h='100000' id='93' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98142' id='92' param='vert' type-v2='layout-flow' w='99034' x='483' y='929'>
                 <zone h='7085' id='8' mode='dropdown' name='map_stops_dinamic' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type-v2='filter' w='10380' x='1690' y='7666'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -2556,7 +2736,7 @@
                     <format attr='padding' value='0' />
                   </zone-style>
                 </zone>
-                <zone h='13821' id='11' name='map_stops_dinamic' synchronized='1' type-v2='currpage' w='10380' x='1147' y='82114'>
+                <zone h='13821' id='11' looped='1' name='map_stops_dinamic' synchronized='1' type-v2='currpage' w='10380' x='1147' y='82114'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -2577,6 +2757,199 @@
         </devicelayout>
       </devicelayouts>
       <simple-id uuid='{37748FB7-F85C-41B9-A742-555299434A7C}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Presentacion'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='103136' id='3' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/bus_rabat.jpg' type-v2='bitmap' w='47703' x='54111' y='1045' />
+        <zone h='27294' id='4' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/ironhack.jpeg' type-v2='bitmap' w='13906' x='605' y='1161' />
+        <zone h='21951' id='5' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/bus_stop.jpg' type-v2='bitmap' w='22854' x='-181' y='79443' />
+        <zone forceUpdate='true' h='33101' id='6' type-v2='text' w='49940' x='2842' y='32636'>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#000000' fontsize='26'>OPTIMIZACION DE LINEAS DE TRANSPORTE</run>
+            <run fontalignment='1'>Æ&#10;&#10;&#10;&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#31bdf6' fontsize='20'>ARTURO RODRIGUEZ</run>
+            <run fontalignment='1'>Æ&#10;</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='800' minheight='800' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='47' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98142' id='46' param='vert' type-v2='layout-flow' w='99034' x='483' y='929'>
+                <zone fixed-size='280' h='103136' id='3' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/bus_rabat.jpg' type-v2='bitmap' w='47703' x='54111' y='1045'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='219' h='27294' id='4' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/ironhack.jpeg' type-v2='bitmap' w='13906' x='605' y='1161'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='33101' id='6' type-v2='text' w='49940' x='2842' y='32636'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontsize='26'>OPTIMIZACION DE LINEAS DE TRANSPORTE</run>
+                    <run fontalignment='1'>Æ&#10;&#10;&#10;&#10;</run>
+                    <run bold='true' fontalignment='1' fontcolor='#31bdf6' fontsize='20'>ARTURO RODRIGUEZ</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='175' h='21951' id='5' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/bus_stop.jpg' type-v2='bitmap' w='22854' x='-181' y='79443'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{28326D07-7C96-466D-BA94-AE66DD114ED7}' />
+    </dashboard>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='RD SQL'>
+      <style />
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='23577' id='5' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/mysql.png' type-v2='bitmap' w='12105' x='82299' y='6969' />
+        <zone h='18583' id='6' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/excel.jpg' type-v2='bitmap' w='15483' x='80233' y='29733' />
+        <zone h='18002' id='7' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/python.jpg' type-v2='bitmap' w='7956' x='84455' y='46574' />
+        <zone h='15796' id='8' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/pandas.png' type-v2='bitmap' w='10465' x='82987' y='65389' />
+        <zone h='24739' id='9' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/tableau.jpg' type-v2='bitmap' w='14871' x='80967' y='80488' />
+        <zone forceUpdate='true' h='5343' id='10' type-v2='text' w='98905' x='608' y='813'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='15'>ESTRUCTURA DE LA BASE DE DATOS - HERRAMIENTAS UTILIZADAS</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='2' />
+            <format attr='background-color' value='#ffffff' />
+          </zone-style>
+        </zone>
+        <zone h='92218' id='23' is-centered='0' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/diagrama_final.png' type-v2='bitmap' w='74728' x='5985' y='9524' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1250' minheight='1250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='63' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98142' id='62' param='vert' type-v2='layout-flow' w='99034' x='483' y='929'>
+                <zone forceUpdate='true' h='5343' id='10' type-v2='text' w='98905' x='608' y='813'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontsize='15'>ESTRUCTURA DE LA BASE DE DATOS - HERRAMIENTAS UTILIZADAS</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='2' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                    <format attr='background-color' value='#ffffff' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='188' h='23577' id='5' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/mysql.png' type-v2='bitmap' w='12105' x='82299' y='6969'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='92218' id='23' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/diagrama_final.png' type-v2='bitmap' w='74728' x='5985' y='9524'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='149' h='18583' id='6' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/excel.jpg' type-v2='bitmap' w='15483' x='80233' y='29733'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='144' h='18002' id='7' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/python.jpg' type-v2='bitmap' w='7956' x='84455' y='46574'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='126' h='15796' id='8' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/pandas.png' type-v2='bitmap' w='10465' x='82987' y='65389'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='198' h='24739' id='9' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/usuario/Desktop/1_Python_Ironhack/Proyectos/Transport_proyect/images/tableau.jpg' type-v2='bitmap' w='14871' x='80967' y='80488'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{9904A896-FF4C-4967-939F-305F6368EEB4}' />
     </dashboard>
     <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Red Lineas'>
       <style />
@@ -2612,12 +2985,124 @@
             <format attr='margin' value='8' />
           </zone-style>
         </zone>
+        <zone forceUpdate='true' h='12427' id='7' type-v2='text' w='7772' x='3060' y='8362'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#d3b348'>Nº LINEAS</run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+            <run bold='true' fontalignment='1' fontcolor='#d3b348'>42</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#f1ce63' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='12427' id='8' type-v2='text' w='7834' x='3121' y='26016'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#d3b348'>Nº VEHICULOS</run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+            <run fontalignment='1' fontcolor='#d3b348'>350</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#d3b348' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='12427' id='9' type-v2='text' w='8017' x='2876' y='45296'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#d3b348'>Nº CONDUCTORES</run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+            <run fontalignment='1' fontcolor='#d3b348'>838</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#f1ce63' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='12427' id='10' type-v2='text' w='7895' x='2876' y='65041'>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#d3b348'>PASAJEROS DIARIOS</run>
+            <run fontalignment='1'>Æ&#10;&#10;</run>
+            <run fontalignment='1' fontcolor='#d3b348'>208.807</run>
+          </formatted-text>
+          <zone-style>
+            <format attr='border-color' value='#d3b348' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='1' />
+          </zone-style>
+        </zone>
       </zones>
       <simple-id uuid='{D5C806BC-F619-4A4F-8907-0AD96BDEE042}' />
     </dashboard>
   </dashboards>
-  <windows saved-dpi-scale-factor='1.25' source-height='37'>
-    <window class='worksheet' name='Network'>
+  <windows source-height='37'>
+    <window class='dashboard' name='Presentacion'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{82226512-4EB6-47F3-BB3F-AE47959319D5}' />
+    </window>
+    <window class='dashboard' name='RD SQL'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{19B849AE-89B4-4710-AC22-69FE586D128E}' />
+    </window>
+    <window class='dashboard' name='Red Lineas'>
+      <viewpoints>
+        <viewpoint name='Network'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='1' />
+      <simple-id uuid='{E6DC33A2-B983-460D-AE19-FB7A82352CDB}' />
+    </window>
+    <window class='dashboard' name='Mapa Dinámico'>
+      <viewpoints>
+        <viewpoint name='map_stops_dinamic'>
+          <current-page>
+            <multibucket>
+              <bucket>#2022-03-21 08:00:00#</bucket>
+            </multibucket>
+          </current-page>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='3' />
+      <simple-id uuid='{42CA6248-180F-4DDB-8552-E1240FAAD2AA}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Lineas'>
+      <viewpoints>
+        <viewpoint name='bus_hr'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='pass_bus'>
+          <zoom type='fit-width' />
+        </viewpoint>
+        <viewpoint name='pass_route_day'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='stop_ida'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='stop_vuelta'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{FADAD82E-3B06-4822-8819-A32177BF626C}' />
+    </window>
+    <window class='dashboard' name='Conclusiones'>
+      <viewpoints />
+      <active id='23' />
+      <simple-id uuid='{8C62BF55-2AC3-4A29-B456-2E8435F71F94}' />
+    </window>
+    <window class='dashboard' name='Despedida'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{CB783478-C7BD-44AB-B615-F67986AD5629}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Network'>
       <cards>
         <edge name='left'>
           <strip size='172'>
@@ -2649,252 +3134,7 @@
       </viewpoint>
       <simple-id uuid='{5729C55D-4E08-40B6-871A-80AF38B9FC34}' />
     </window>
-    <window class='worksheet' name='map_stops_dinamic'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='172'>
-            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type='filter' />
-            <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' type='size' />
-            <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' type='color' />
-            <card type='currpage' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <current-page>
-          <multibucket>
-            <bucket>#2022-03-21 18:00:00#</bucket>
-          </multibucket>
-        </current-page>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{F8A48F0E-70E9-42DE-98B6-597AFB6BF4F9}' />
-    </window>
-    <window class='worksheet' name='pass_hours_dinamic'>
-      <cards>
-        <edge name='left'>
-          <strip size='172'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='172'>
-            <card type='currpage' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <current-page>
-          <multibucket>
-            <bucket>#2022-03-27 10:00:00#</bucket>
-          </multibucket>
-        </current-page>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{0A7BB9F6-A0F9-48A8-96E3-02D80B75005B}' />
-    </window>
-    <window class='worksheet' name='pass_hr'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{943159C5-5AB7-4B2A-A011-5F5193CEFCDB}' />
-    </window>
-    <window class='worksheet' name='pass_days'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='173'>
-            <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:operation:nk]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{8D155C29-32FA-464D-AEF0-E99481A64A18}' />
-    </window>
-    <window class='worksheet' name='pass_hours'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]' type='filter' />
-            <card mode='compact' param='[Parameters].[Parámetro 1]' type='parameter' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{15F88F64-25A2-40A0-B283-3F14ADBBE4C6}' />
-    </window>
-    <window class='worksheet' name='pass_route1'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='104'>
-            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date:ok]' type='filter' />
-            <card pane-specification-id='1' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passengers):ok]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{2D4C77DE-DDF6-4283-8584-71D4964B6F2A}' />
-    </window>
-    <window class='worksheet' name='pass_route_day'>
-      <cards>
-        <edge name='left'>
-          <strip size='172'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='172'>
-            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type='filter' />
-            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' type='filter' />
-            <card mode='checkdropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type='filter' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <default-map-tool-selection tool='2' />
-      </viewpoint>
-      <simple-id uuid='{92825DEC-7694-4F6B-BBFD-FA62D2311CE1}' />
-    </window>
-    <window class='worksheet' name='pass_stop'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='173'>
-            <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{7F02D4A8-C0C2-4198-A07F-F06A0783ED7C}' />
-    </window>
-    <window class='worksheet' name='bus_hr'>
+    <window class='worksheet' hidden='true' name='bus_hr'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2914,27 +3154,7 @@
       </cards>
       <simple-id uuid='{65D74C39-2938-4C9F-B337-3C63C0067A94}' />
     </window>
-    <window class='worksheet' name='pass_bus'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-        </edge>
-      </cards>
-      <simple-id uuid='{2B27DBCE-F834-4D52-B858-1D94419398A4}' />
-    </window>
-    <window class='worksheet' name='map_stops'>
+    <window class='worksheet' hidden='true' name='map_stops_dinamic'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -2956,77 +3176,133 @@
         </edge>
         <edge name='right'>
           <strip size='172'>
-            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' type='filter' />
-            <card param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type='filter' />
+            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type='filter' />
             <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' type='size' />
             <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[cnt:ticket_number (passenger_location2):qk]' type='color' />
+            <card looped='1' type='currpage' />
           </strip>
         </edge>
       </cards>
-      <simple-id uuid='{7F9F7CFB-CCC2-49D3-812C-8C2862579E9F}' />
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2022-03-21 12:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{F8A48F0E-70E9-42DE-98B6-597AFB6BF4F9}' />
     </window>
-    <window class='dashboard' name='Red Lineas'>
-      <viewpoints>
-        <viewpoint name='Network'>
-          <zoom type='entire-view' />
-        </viewpoint>
-      </viewpoints>
-      <active id='6' />
-      <simple-id uuid='{E6DC33A2-B983-460D-AE19-FB7A82352CDB}' />
+    <window class='worksheet' hidden='true' name='pass_bus'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2B27DBCE-F834-4D52-B858-1D94419398A4}' />
     </window>
-    <window class='dashboard' maximized='true' name='Mapa Dinámico'>
-      <viewpoints>
-        <viewpoint name='map_stops_dinamic'>
-          <current-page>
-            <multibucket>
-              <bucket>#2022-03-21 00:00:00#</bucket>
-            </multibucket>
-          </current-page>
-          <zoom type='entire-view' />
-        </viewpoint>
-      </viewpoints>
-      <active id='3' />
-      <simple-id uuid='{42CA6248-180F-4DDB-8552-E1240FAAD2AA}' />
+    <window class='worksheet' hidden='true' name='pass_route_day'>
+      <cards>
+        <edge name='left'>
+          <strip size='172'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='172'>
+            <card mode='dropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[dy:date (passenger_location2):ok]' type='filter' />
+            <card mode='checkdropdown' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{92825DEC-7694-4F6B-BBFD-FA62D2311CE1}' />
     </window>
-    <window class='dashboard' name='Lineas'>
-      <viewpoints>
-        <viewpoint name='bus_hr'>
-          <zoom type='fit-width' />
-        </viewpoint>
-        <viewpoint name='pass_bus'>
-          <zoom type='fit-width' />
-        </viewpoint>
-        <viewpoint name='pass_route_day'>
-          <zoom type='entire-view' />
-        </viewpoint>
-        <viewpoint name='pass_stop'>
-          <zoom type='entire-view' />
-        </viewpoint>
-      </viewpoints>
-      <active id='1' />
-      <simple-id uuid='{A0B6C435-6E03-4D80-A8C0-7516F1CA929E}' />
+    <window class='worksheet' hidden='true' name='stop_ida'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='172'>
+            <card param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code:ok]' type='filter' />
+            <card param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{290733D4-0F36-4EE1-980C-D40EA3F5C090}' />
     </window>
-    <window class='dashboard' name='Mapa Dinamico 2'>
-      <viewpoints>
-        <viewpoint name='map_stops_dinamic'>
-          <current-page>
-            <multibucket>
-              <bucket>#2022-03-21 22:00:00#</bucket>
-            </multibucket>
-          </current-page>
-          <zoom type='entire-view' />
-        </viewpoint>
-        <viewpoint name='pass_hours_dinamic'>
-          <current-page>
-            <multibucket>
-              <bucket>#2022-03-21 22:00:00#</bucket>
-            </multibucket>
-          </current-page>
-          <zoom type='entire-view' />
-        </viewpoint>
-      </viewpoints>
-      <active id='3' />
-      <simple-id uuid='{2395A865-067C-41DD-810F-055D94CC6D98}' />
+    <window class='worksheet' hidden='true' name='stop_vuelta'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='172'>
+            <card param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:route_code (passenger_location2):ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1q3zlit0cnqvpt1cylnag00yk70j].[none:line_code (passenger_location2):ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0C7357C5-DDB8-4EFA-B8BE-D78E561759F4}' />
     </window>
   </windows>
 </workbook>
